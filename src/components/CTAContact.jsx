@@ -37,15 +37,15 @@ export default function CTAContact() {
       // Using Vite's import.meta.env syntax. 
       // (If using Create React App, change these to process.env.REACT_APP_...)
       await emailjs.send(
-        "service_kxua174",
-        "template_isw7lrs",
+        import.meta.env.VITE_EMAILJS_SERVICE,
+        import.meta.env.VITE_EMAILJS_TEMP,
         {
           name: form.name,
           email: form.email,
           project: form.type,
           message: form.message,
         },
-        "Kzf5Y26Ooh5V2nbp7"
+       import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       );
 
       setSubmitted(true);
