@@ -7,9 +7,8 @@ export default function Footer() {
     <footer className="relative border-t border-line/60 py-10">
       <div className="mx-auto flex max-w-6xl flex-col items-center gap-6 px-5 text-center sm:flex-row sm:justify-between sm:text-left">
         <div className="flex items-center gap-2">
-          <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-violet/15 font-display text-sm font-bold text-violet-soft">
-            AW
-          </span>
+                    <img src="favicon.svg" alt="" height={16} width={40} className="rounded-2xl"/>
+
           <span className="font-display text-base font-semibold text-ink">azentweb</span>
         </div>
 
