@@ -1,0 +1,50 @@
+import { AtSign } from "lucide-react";
+import InstagramIcon from "./ui/InstagramIcon";
+import { nav, social } from "../data/content";
+
+export default function Footer() {
+  return (
+    <footer className="relative border-t border-line/60 py-10">
+      <div className="mx-auto flex max-w-6xl flex-col items-center gap-6 px-5 text-center sm:flex-row sm:justify-between sm:text-left">
+        <div className="flex items-center gap-2">
+          <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-violet/15 font-display text-sm font-bold text-violet-soft">
+            AW
+          </span>
+          <span className="font-display text-base font-semibold text-ink">azentweb</span>
+        </div>
+
+        <nav className="flex flex-wrap items-center justify-center gap-5">
+          {nav.map((item) => (
+            <a key={item.href} href={item.href} className="text-sm text-muted hover:text-ink">
+              {item.label}
+            </a>
+          ))}
+        </nav>
+
+        <div className="flex items-center gap-4">
+          <a
+            href={social.instagram}
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Instagram"
+            className="text-muted transition-colors hover:text-cyan-soft"
+          >
+            <InstagramIcon size={18} />
+          </a>
+          <a
+            href="https://threads.net/@azentweb"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Threads"
+            className="text-muted transition-colors hover:text-cyan-soft"
+          >
+            <AtSign size={18} />
+          </a>
+        </div>
+      </div>
+      <p className="mt-8 text-center font-mono text-[11px] text-faint">
+        © {new Date().getFullYear()} Azentweb. From idea to launch.
+      </p>
+    </footer>
+  );
+}
