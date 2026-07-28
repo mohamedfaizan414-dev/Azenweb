@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Send, CheckCircle2 } from "lucide-react";
+import emailjs from "@emailjs/browser"; // Added missing import
 import InstagramIcon from "./ui/InstagramIcon";
 import { social } from "../data/content";
 import { Reveal, Eyebrow, PrimaryButton } from "./ui/Primitives";
@@ -24,12 +25,39 @@ export default function CTAContact() {
     return err;
   };
 
-  const onSubmit = (e) => {
+  const onSubmit = async (e) => {
     e.preventDefault();
+
     const err = validate();
     setErrors(err);
-    if (Object.keys(err).length === 0) {
+
+    if (Object.keys(err).length) return;
+
+    try {
+      // Using Vite's import.meta.env syntax. 
+      // (If using Create React App, change these to process.env.REACT_APP_...)
+      await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        {
+          name: form.name,
+          email: form.email,
+          project: form.type,
+          message: form.message,
+        },
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      );
+
       setSubmitted(true);
+      setForm({
+        name: "",
+        email: "",
+        type: "",
+        message: "",
+      });
+    } catch (err) {
+      alert("Failed to send.");
+      console.error(err);
     }
   };
 
