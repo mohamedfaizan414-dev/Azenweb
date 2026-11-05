@@ -3,7 +3,7 @@ import { motion, useReducedMotion } from "framer-motion";
 import { Check, Loader2 } from "lucide-react";
 
 const LINES = [
-  { text: "$ azentweb build your-idea", type: "cmd" },
+  { text: "$ azenweb build your-idea", type: "cmd" },
   { text: "resolving scope & requirements", type: "log" },
   { text: "designing interface", type: "log" },
   { text: "compiling full-stack app", type: "log" },

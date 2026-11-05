@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="flex items-center gap-2">
                     <img src="favicon.svg" alt="" height={16} width={40} className="rounded-2xl"/>
 
-          <span className="font-display text-base font-semibold text-ink">azentweb</span>
+          <span className="font-display text-base font-semibold text-ink">azenweb</span>
         </div>
 
         <nav className="flex flex-wrap items-center justify-center gap-5">
@@ -42,7 +42,7 @@ export default function Footer() {
         </div>
       </div>
       <p className="mt-8 text-center font-mono text-[11px] text-faint">
-        © {new Date().getFullYear()} Azentweb. From idea to launch.
+        © {new Date().getFullYear()} Azenweb. From idea to launch.
       </p>
     </footer>
   );

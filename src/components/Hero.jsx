@@ -36,7 +36,7 @@ export default function Hero() {
           </motion.h1>
 
           <motion.p variants={item} className="mt-6 max-w-lg text-base leading-relaxed text-muted sm:text-lg">
-            Azentweb designs and builds the websites, apps, and dashboards behind
+            Azenweb designs and builds the websites, apps, and dashboards behind
             growing businesses — full-stack, AI-integrated, and handed over with
             the keys.
           </motion.p>
@@ -55,7 +55,7 @@ export default function Hero() {
             rel="noreferrer"
             className="mt-8 inline-flex items-center gap-2 text-sm text-faint transition-colors hover:text-cyan-soft"
           >
-            <InstagramIcon size={15} /> or DM us on Instagram — @azentweb
+            <InstagramIcon size={15} /> or DM us on Instagram — @azenweb
           </motion.a>
         </motion.div>
 

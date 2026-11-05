@@ -45,7 +45,7 @@ export default function Nav() {
             AW
           </span> */}
           <img src="favicon.svg" alt="" height={16} width={40} className="rounded-2xl"/>
-          <span className="font-display text-base font-semibold text-ink">azentweb</span>
+          <span className="font-display text-base font-semibold text-ink">azenweb</span>
         </a>
 
         <nav className="hidden items-center gap-7 md:flex">

@@ -203,5 +203,5 @@ export const dashboardFeatures = [
 ];
 
 export const social = {
-  instagram: "https://instagram.com/azentweb",
+  instagram: "https://instagram.com/azenweb",
 };
