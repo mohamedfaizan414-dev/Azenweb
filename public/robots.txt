@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://azenweb.com/sitemap.xml
+Sitemap: https://azenweb.vercel.app/sitemap.xml
