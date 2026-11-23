@@ -1,8 +1,14 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+<<<<<<< HEAD
 import { Menu, X, ArrowRight } from "lucide-react";
 import AzenwebLogo from "./ui/AzenwebLogo";
 import { nav, company } from "../data/content";
+=======
+import { Menu, X } from "lucide-react";
+import InstagramIcon from "./ui/InstagramIcon";
+import { nav, social } from "../data/content";
+>>>>>>> 56792d3bb0982ac11f84e0b2dca95d6c8ff1564c
 
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false);
@@ -30,6 +36,7 @@ export default function Nav() {
   }, []);
 
   return (
+<<<<<<< HEAD
     <header className="fixed top-4 sm:top-5 left-0 right-0 z-50 flex justify-center px-3 sm:px-6 pointer-events-none">
       <div
         className={`pointer-events-auto w-full max-w-5xl rounded-full px-5 sm:px-7 py-2.5 transition-all duration-300 ${
@@ -97,6 +104,68 @@ export default function Nav() {
             exit={{ opacity: 0, y: -10, scale: 0.98 }}
             transition={{ duration: 0.2, ease: [0.16, 1, 0.3, 1] }}
             className="pointer-events-auto fixed top-20 left-4 right-4 z-50 rounded-2xl bg-black/95 p-6 backdrop-blur-2xl border border-white/15 shadow-2xl md:hidden"
+=======
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        scrolled ? "py-3" : "py-5"
+      }`}
+    >
+      <div
+        className={`mx-auto flex max-w-6xl items-center justify-between rounded-full px-4 sm:px-6 transition-all duration-300 ${
+          scrolled ? "glass mx-3 sm:mx-6" : "mx-3 sm:mx-6"
+        }`}
+      >
+        <a href="#top" className="flex items-center gap-2 py-2.5">
+          {/* <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-violet/15 font-display text-sm font-bold text-violet-soft">
+            AW
+          </span> */}
+          <img src="favicon.svg" alt="" height={16} width={40} className="rounded-2xl"/>
+          <span className="font-display text-base font-semibold text-ink">azenweb</span>
+        </a>
+
+        <nav className="hidden items-center gap-7 md:flex">
+          {nav.map((item) => (
+            <a
+              key={item.href}
+              href={item.href}
+              className={`text-sm font-medium transition-colors ${
+                active === item.href ? "text-cyan-soft" : "text-muted hover:text-ink"
+              }`}
+            >
+              {item.label}
+            </a>
+          ))}
+        </nav>
+
+        <div className="hidden md:block">
+          <motion.a
+            href="#contact"
+            whileHover={{ scale: 1.03 }}
+            whileTap={{ scale: 0.98 }}
+            className="inline-flex items-center gap-2 rounded-full bg-violet px-5 py-2.5 text-sm font-semibold text-white shadow-glow"
+          >
+            Start a Project
+          </motion.a>
+        </div>
+
+        <button
+          aria-label="Toggle menu"
+          onClick={() => setOpen((v) => !v)}
+          className="flex h-10 w-10 items-center justify-center rounded-full text-ink md:hidden"
+        >
+          {open ? <X size={20} /> : <Menu size={20} />}
+        </button>
+      </div>
+
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
+            className="glass mx-3 mt-2 rounded-2xl px-6 py-5 md:hidden"
+>>>>>>> 56792d3bb0982ac11f84e0b2dca95d6c8ff1564c
           >
             <div className="flex flex-col gap-4">
               {nav.map((item) => (
@@ -104,11 +173,15 @@ export default function Nav() {
                   key={item.href}
                   href={item.href}
                   onClick={() => setOpen(false)}
+<<<<<<< HEAD
                   className={`text-base font-medium py-1.5 transition-colors ${
                     active === item.href
                       ? "text-white font-semibold"
                       : "text-[#8E8D94] hover:text-white"
                   }`}
+=======
+                  className="text-base font-medium text-ink/90"
+>>>>>>> 56792d3bb0982ac11f84e0b2dca95d6c8ff1564c
                 >
                   {item.label}
                 </a>
@@ -116,6 +189,7 @@ export default function Nav() {
               <a
                 href="#contact"
                 onClick={() => setOpen(false)}
+<<<<<<< HEAD
                 className="mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-[#F8F7F4] text-black px-5 py-3 text-sm font-semibold shadow-lg"
               >
                 Let's Talk <ArrowRight size={15} />
@@ -124,6 +198,20 @@ export default function Nav() {
                 <span>{company.location}</span>
                 <span>{company.phone}</span>
               </div>
+=======
+                className="mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-violet px-5 py-3 text-sm font-semibold text-white"
+              >
+                Start a Project
+              </a>
+              <a
+                href={social.instagram}
+                target="_blank"
+                rel="noreferrer"
+                className="flex items-center gap-2 text-sm text-muted"
+              >
+                <InstagramIcon size={16} /> DM us on Instagram
+              </a>
+>>>>>>> 56792d3bb0982ac11f84e0b2dca95d6c8ff1564c
             </div>
           </motion.div>
         )}

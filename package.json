@@ -11,13 +11,20 @@
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
+<<<<<<< HEAD
     "@types/three": "^0.187.0",
+=======
+>>>>>>> 56792d3bb0982ac11f84e0b2dca95d6c8ff1564c
     "dotenv": "^17.4.2",
     "framer-motion": "^12.42.2",
     "lucide-react": "^1.27.0",
     "react": "^19.2.7",
+<<<<<<< HEAD
     "react-dom": "^19.2.7",
     "three": "^0.187.0"
+=======
+    "react-dom": "^19.2.7"
+>>>>>>> 56792d3bb0982ac11f84e0b2dca95d6c8ff1564c
   },
   "devDependencies": {
     "@types/react": "^19.2.17",

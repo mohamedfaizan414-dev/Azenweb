@@ -1,16 +1,28 @@
+<<<<<<< HEAD
 import { Rocket, Smartphone, ShieldCheck, MessageSquare } from "lucide-react";
+=======
+import { Zap, MessageSquare, Sparkles, ShieldCheck } from "lucide-react";
+>>>>>>> 56792d3bb0982ac11f84e0b2dca95d6c8ff1564c
 import { differentiators } from "../data/content";
 import { Reveal, Eyebrow, Stagger, StaggerItem } from "./ui/Primitives";
 
 const ICONS = {
+<<<<<<< HEAD
   rocket: Rocket,
   smartphone: Smartphone,
   "shield-check": ShieldCheck,
   "message-square": MessageSquare,
+=======
+  zap: Zap,
+  "message-square": MessageSquare,
+  sparkles: Sparkles,
+  "shield-check": ShieldCheck,
+>>>>>>> 56792d3bb0982ac11f84e0b2dca95d6c8ff1564c
 };
 
 export default function WhyUs() {
   return (
+<<<<<<< HEAD
     <section id="why-us" className="relative py-24 sm:py-32">
       <div className="mx-auto max-w-6xl px-5 sm:px-6">
         <Reveal>
@@ -43,6 +55,25 @@ export default function WhyUs() {
                     {d.detail}
                   </p>
                 </div>
+=======
+    <section className="relative py-24 sm:py-32">
+      <div className="mx-auto max-w-6xl px-5 sm:px-6">
+        <Reveal>
+          <Eyebrow>Why founders work with us</Eyebrow>
+          <h2 className="mt-4 max-w-xl font-display text-3xl font-semibold leading-tight text-ink sm:text-4xl">
+            The difference is in the details.
+          </h2>
+        </Reveal>
+
+        <Stagger className="mt-12 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4" gap={0.1}>
+          {differentiators.map((d) => {
+            const Icon = ICONS[d.icon];
+            return (
+              <StaggerItem key={d.title}>
+                <Icon size={20} className="text-cyan-soft" />
+                <h3 className="mt-4 font-display text-base font-semibold text-ink">{d.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted">{d.detail}</p>
+>>>>>>> 56792d3bb0982ac11f84e0b2dca95d6c8ff1564c
               </StaggerItem>
             );
           })}

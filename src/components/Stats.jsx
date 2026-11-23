@@ -1,17 +1,28 @@
+<<<<<<< HEAD
 import { Rocket, ShieldCheck, LayoutDashboard, MessageCircle, Timer } from "lucide-react";
+=======
+import { Rocket, LayoutDashboard, Timer, MessageCircle } from "lucide-react";
+>>>>>>> 56792d3bb0982ac11f84e0b2dca95d6c8ff1564c
 import { stats } from "../data/content";
 import { Counter, Stagger, StaggerItem } from "./ui/Primitives";
 
 const ICONS = {
   rocket: Rocket,
+<<<<<<< HEAD
   "shield-check": ShieldCheck,
   "layout-dashboard": LayoutDashboard,
   "message-circle": MessageCircle,
   timer: Timer,
+=======
+  "layout-dashboard": LayoutDashboard,
+  timer: Timer,
+  "message-circle": MessageCircle,
+>>>>>>> 56792d3bb0982ac11f84e0b2dca95d6c8ff1564c
 };
 
 export default function Stats() {
   return (
+<<<<<<< HEAD
     <section className="relative border-y border-white/[0.08] bg-[#070709] py-14 sm:py-16">
       <div className="mx-auto max-w-6xl px-5 sm:px-6">
         <Stagger
@@ -49,6 +60,20 @@ export default function Stats() {
                 <p className="text-xs sm:text-sm leading-snug text-[#8E8D94]">
                   {s.label}
                 </p>
+=======
+    <section className="relative border-y border-line/60 py-12 sm:py-14">
+      <div className="mx-auto max-w-6xl px-5 sm:px-6">
+        <Stagger className="grid grid-cols-2 gap-6 sm:grid-cols-4 sm:gap-8" gap={0.1}>
+          {stats.map((s, i) => {
+            const Icon = ICONS[s.icon];
+            return (
+              <StaggerItem key={i} className="flex flex-col items-start gap-2">
+                <Icon size={18} className="text-violet-soft" />
+                <div className="font-display text-3xl font-semibold text-ink sm:text-4xl">
+                  <Counter value={s.value} suffix={s.suffix} />
+                </div>
+                <p className="text-xs text-muted sm:text-sm">{s.label}</p>
+>>>>>>> 56792d3bb0982ac11f84e0b2dca95d6c8ff1564c
               </StaggerItem>
             );
           })}
