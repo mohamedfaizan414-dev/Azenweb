@@ -12,7 +12,6 @@ const LINES = [
   { text: "deployed to production", type: "launch" },
 ];
 
-<<<<<<< HEAD
 // Scanning line animation variants
 const scanVariants = {
   animate: {
@@ -25,8 +24,6 @@ const scanVariants = {
   },
 };
 
-=======
->>>>>>> 56792d3bb0982ac11f84e0b2dca95d6c8ff1564c
 export default function DeployTerminal() {
   const reduce = useReducedMotion();
   const [visible, setVisible] = useState(reduce ? LINES.length : 0);
@@ -42,7 +39,6 @@ export default function DeployTerminal() {
   }, [visible, reduce]);
 
   return (
-<<<<<<< HEAD
     <div className="glass relative overflow-hidden rounded-xl2 p-1 shadow-glow ring-1 ring-white/5 shadow-[0_20px_60px_rgba(0,0,0,0.5)]">
       {/* Scanning line */}
       {!reduce && (
@@ -63,15 +59,6 @@ export default function DeployTerminal() {
       </div>
 
       {/* Terminal body */}
-=======
-    <div className="glass relative overflow-hidden rounded-xl2 p-1 shadow-glow">
-      <div className="flex items-center gap-2 border-b border-line px-4 py-3">
-        <span className="h-2.5 w-2.5 rounded-full bg-[#ff5f56]" />
-        <span className="h-2.5 w-2.5 rounded-full bg-[#ffbd2e]" />
-        <span className="h-2.5 w-2.5 rounded-full bg-[#27c93f]" />
-        <span className="ml-2 font-mono text-[11px] text-faint">azentweb — build</span>
-      </div>
->>>>>>> 56792d3bb0982ac11f84e0b2dca95d6c8ff1564c
       <div className="min-h-[220px] px-5 py-5 font-mono text-[12.5px] leading-7 sm:text-[13px]">
         {LINES.slice(0, visible).map((line, i) => (
           <motion.div
@@ -96,7 +83,6 @@ export default function DeployTerminal() {
         ))}
         <span className="mt-1 inline-block h-4 w-[7px] animate-pulse bg-violet-soft/70 align-middle" />
       </div>
-<<<<<<< HEAD
 
       {/* Status bar */}
       <div className="flex items-center gap-2 border-t border-line px-4 py-2 bg-gradient-to-r from-raised2 to-raised">
@@ -106,8 +92,6 @@ export default function DeployTerminal() {
         </span>
         <span className="font-mono text-[11px] text-faint">Connected</span>
       </div>
-=======
->>>>>>> 56792d3bb0982ac11f84e0b2dca95d6c8ff1564c
     </div>
   );
 }

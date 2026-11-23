@@ -12,7 +12,6 @@ import CTAContact from "./components/CTAContact";
 import Footer from "./components/Footer";
 import JourneyBar from "./components/ui/JourneyBar";
 import AmbientBackground from "./components/ui/AmbientBackground";
-<<<<<<< HEAD
 import ThreeBackground from "./components/ui/ThreeBackground";
 import WhatsAppButton from "./components/ui/WhatsAppButton";
 
@@ -25,16 +24,6 @@ export default function App() {
       <Nav />
       <WhatsAppButton />
       <main className="relative z-10">
-=======
-
-export default function App() {
-  return (
-    <div className="relative min-h-screen">
-      <AmbientBackground />
-      <JourneyBar />
-      <Nav />
-      <main>
->>>>>>> 56792d3bb0982ac11f84e0b2dca95d6c8ff1564c
         <Hero />
         <Stats />
         <Services />
