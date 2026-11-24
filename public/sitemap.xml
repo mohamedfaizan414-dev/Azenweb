@@ -4,37 +4,37 @@
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <url>
-    <loc>https://azenweb.com/</loc>
+    <loc>https://azenweb.vercel.app/</loc>
     <lastmod>2026-11-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.00</priority>
   </url>
   <url>
-    <loc>https://azenweb.com/#work</loc>
+    <loc>https://azenweb.vercel.app/#work</loc>
     <lastmod>2026-11-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://azenweb.com/#services</loc>
+    <loc>https://azenweb.vercel.app/#services</loc>
     <lastmod>2026-11-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://azenweb.com/#why-us</loc>
+    <loc>https://azenweb.vercel.app/#why-us</loc>
     <lastmod>2026-11-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://azenweb.com/#pricing</loc>
+    <loc>https://azenweb.vercel.app/#pricing</loc>
     <lastmod>2026-11-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://azenweb.com/#contact</loc>
+    <loc>https://azenweb.vercel.app/#contact</loc>
     <lastmod>2026-11-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.85</priority>
